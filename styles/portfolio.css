@@ -92,6 +92,12 @@
   pointer-events: auto;
 }
 
+/* If .dots-circle has .open, show the quick-links */
+.dots-circle.open .quick-links {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* Style commun pour chaque lien/icône */
 .quick-link {
   position: absolute;

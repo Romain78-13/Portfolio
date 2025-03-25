@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Accueil</title>
+  <link rel="stylesheet" href="styles/portfolio.css" />
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/timeline.css" />
+</head>
+<body>
+
+<!-- Section d'accueil / Hero -->
+<section class="hero">
+  <!-- Conteneur pour l’avatar -->
+  <div class="avatar-container">
+    <img src="icons/avatar2.jpg" alt="Avatar" class="avatar">
+
+    <!-- Pastille avec l’icône "trois points" -->
+    <div class="dots-circle">
+      <img src="icons/Trois_point.png" alt="Menu rapide" class="dots-img" />
+
+      <!-- Groupe d’icônes (quick-links) affichées au survol -->
+      <div class="quick-links">
+        <!-- Expérience -->
+        <a href="#experience" class="quick-link link-experience">
+          <img src="icons/exp-pro.png" alt="Exp" />
+          <span class="label">Experience</span>
+        </a>
+        <!-- Projects -->
+        <a href="#projects" class="quick-link link-projects">
+          <img src="icons/projet.png" alt="Projects" />
+          <span class="label">Projects</span>
+        </a>
+        <!-- About me -->
+        <a href="#About me" class="quick-link link-about-me">
+          <img src="icons/about-me.png" alt="About me" />
+          <span class="label">About me</span>
+        </a>
+      </div>
+    </div>
+      <img
+        src="icons/faster-here-icon.jpg"
+        alt="Faster way here arrow"
+        class="faster-hint"
+      />
+  </div>
+
+  <!-- Titre principal, sous-titre, bouton CV -->
+  <h1>So. Welcome</h1>
+  <p class="subtitle">Romain Simeon's Portfolio</p>
+  <a class="btn-cv" href="pdf-files/CV_Romain_Simeon.pdf" download>
+    Download CV <span>↓</span>
+  </a>
+</section>
+
+<!-- Section about me en dessous (avec la timeline) -->
+<section id="about-me" class="timeline-section content-section">
+  <h2>About Me</h2>
+  <p class="intro">
+    Welcome to my story! Scroll down to discover my background, studies, skills,
+    passions and my contact.
+  </p>
+
+  <div class="timeline">
+    <div class="line"></div>
+    <div class="line-fill"></div>
+    <div class="leaf-indicator">
+      <img src="icons-timeline/leaf.png" alt="Leaf progress" />
+    </div>
+
+    <!-- Event 1: Origin -->
+    <div class="event left hidden">
+      <div class="icon">
+        <img src="icons-timeline/house-icon.png" alt="Origin icon">
+      </div>
+      <div class="card">
+        <h3>Origin</h3>
+        <p>
+          I was born in Marseille, a vibrant city in the south of France.
+          Growing up near the Mediterranean coast shaped my curiosity.
+          This early connection with the environment continues to influence how I work and think
+          between the outdoors and my studies.
+        </p>
+      </div>
+    </div>
+
+    <!-- Event 2: Studies -->
+    <div class="event right hidden">
+      <div class="icon">
+        <img src="icons-timeline/book-icon.png" alt="Studies icon">
+      </div>
+      <div class="card">
+        <h3>Studies</h3>
+        <p>
+          From a technical degree (DUT) to a Bachelor's and now a Master's in Computer Science,
+          I've built a solid background in programming and data.
+          I quickly found a real passion for coding, problem-solving,
+          and making sense of data through statistics.
+        </p>
+      </div>
+    </div>
+
+    <!-- Event 3: Skills -->
+    <div class="event left hidden">
+      <div class="icon">
+        <img src="icons-timeline/computer-icon.png" alt="Skills icon">
+      </div>
+      <div class="card">
+        <h3>Skills</h3>
+        <p>
+          I’ve built solid technical skills in Python, R, SQL, and Java, and I’m
+          confident using tools like Excel (VBA), RStudio, and Figma.
+          With an analytical mindset, adaptability, and a collaborative spirit,
+          I’m always eager to learn and take on new challenges.
+        </p>
+      </div>
+    </div>
+
+    <!-- Event 4: Passions -->
+    <div class="event right hidden">
+      <div class="icon">
+        <img src="icons-timeline/heart-icon.png" alt="Passions icon">
+      </div>
+      <div class="card">
+        <h3>Passions</h3>
+        <p>
+          Outside of data, I love diving into books, be it in French or English
+          to discover new ideas and stories.
+          I enjoy keeping up with tech trends,
+          and I have a soft spot for the creativity of the Lego universe.
+          Oh, and yes… I proudly hold a Mario Kart license 😄
+        </p>
+      </div>
+    </div>
+
+    <!-- Event 5: Contact -->
+    <!-- Event 5: Contact -->
+    <div class="event left hidden">
+      <div class="icon">
+        <img src="icons-timeline/contact-icon.png" alt="Contact icon">
+      </div>
+      <div class="card">
+        <h3>Contact</h3>
+        <p>
+          Let’s stay in touch! I’m always open to new opportunities, collaborations, or simply
+          connecting with people.
+          Check out my LinkedIn profile or grab a copy of my CV below.
+        </p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/romain-sim%C3%A9on/" target="_blank">LinkedIn</a> |
+          <a href="pdf-files/CV_Romain_Simeon.pdf" target="_blank">CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="content-section">
+  <h2>Projects</h2>
+  <p>Contenu de la section projets...</p>
+</section>
+
+<!-- Autres sections (ex. Experience, Projects, Contact) -->
+<section id="experience" class="content-section">
+  <h2>Experience</h2>
+  <p>Contenu de la section expérience...</p>
+</section>
+
+<script src="javascript/timeline.js"></script>
+<script src="javascript/dots-circle-toggle.js"></script>
+
+</body>
+</html>

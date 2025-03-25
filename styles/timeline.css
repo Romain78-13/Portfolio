@@ -87,7 +87,7 @@
 .event {
   position: relative;
   width: 50%;
-  margin-bottom: 3rem; /* space between timeline events */
+  margin-bottom: 1rem; /* space between timeline events */
   z-index: 3; /* above the line */
   /* We'll hide them by default using .hidden */
   opacity: 0;
@@ -177,3 +177,21 @@
     margin-right: auto;
   }
 }
+
+.contact-links {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.contact-links a {
+  color: #3e946e; /* ton vert clair */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: #2c7b5b;
+  text-decoration: underline;
+}
+
