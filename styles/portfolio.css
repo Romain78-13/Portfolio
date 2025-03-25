@@ -98,6 +98,12 @@
   pointer-events: auto;
 }
 
+/* Afficher les labels des quick-links quand le menu est ouvert (pour mobile) */
+.dots-circle.open .quick-link .label {
+  max-width: 200px;
+  opacity: 1;
+}
+
 /* Style commun pour chaque lien/icône */
 .quick-link {
   position: absolute;

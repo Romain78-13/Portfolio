@@ -2,18 +2,28 @@ document.addEventListener("DOMContentLoaded", function() {
   const dotsCircle = document.querySelector(".dots-circle");
   const quickLinks = dotsCircle.querySelector(".quick-links");
 
-  // Helper function to toggle open
+  // Fonction pour basculer l'affichage du menu
   function toggleOpen(e) {
     e.stopPropagation();
     dotsCircle.classList.toggle("open");
   }
 
-  // Listen for click
+  // Écoute sur le cercle pour click et touchstart
   dotsCircle.addEventListener("click", toggleOpen);
-  // Listen for touchstart (for mobile devices)
   dotsCircle.addEventListener("touchstart", toggleOpen);
 
-  // Close if user taps/clicks outside the circle
+  // Empêcher la propagation sur chaque quick-link pour ne pas fermer le menu lorsqu'on les touche
+  const quickLinkElements = dotsCircle.querySelectorAll(".quick-link");
+  quickLinkElements.forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.stopPropagation();
+    });
+    link.addEventListener("touchstart", function(e) {
+      e.stopPropagation();
+    });
+  });
+
+  // Fermer le menu si on clique ou touche en dehors du cercle
   document.addEventListener("click", (e) => {
     if (!dotsCircle.contains(e.target)) {
       dotsCircle.classList.remove("open");
