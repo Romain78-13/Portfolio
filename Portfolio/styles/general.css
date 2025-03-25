@@ -1,0 +1,13 @@
+/* -- Réinitialisation de base -- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -- Corps principal -- */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
