@@ -23,7 +23,7 @@ a, button, input, select, textarea {
   cursor: none !important;
 }
 
-@media (pointer: coarse) {
+@media screen and (max-width: 768px) {
   .custom-cursor {
     opacity: 0 !important;
   }
