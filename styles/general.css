@@ -23,6 +23,12 @@ a, button, input, select, textarea {
   cursor: none !important;
 }
 
+@media (pointer: coarse) {
+  .custom-cursor {
+    opacity: 0 !important;
+  }
+}
+
 /* Style du curseur personnalisé pour une image 24x24 */
 .custom-cursor {
   position: fixed;
