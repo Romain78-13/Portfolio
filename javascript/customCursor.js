@@ -1,4 +1,11 @@
+// JS pour customCursor:
+
 document.addEventListener("DOMContentLoaded", () => {
+  // Si l'appareil est tactile, on ne crée pas le curseur personnalisé
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    return;
+  }
+
   // Créer l'élément du curseur personnalisé
   const customCursor = document.createElement("div");
   customCursor.classList.add("custom-cursor");
