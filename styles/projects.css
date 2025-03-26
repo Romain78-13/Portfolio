@@ -1,0 +1,63 @@
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 2rem; /* extra space under the heading */
+}
+
+/* The main container that wraps all project cards */
+.projects-container {
+  position: relative;           /* so we can place the vertical line */
+  display: flex;
+  flex-wrap: wrap;             /* wraps to next row if screen is smaller */
+  justify-content: space-between;
+  /* You can also add gap: 2rem; if you prefer a newer approach */
+}
+
+/* The vertical dividing line in the middle */
+.projects-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;                   /* halfway across the container */
+  width: 2px;
+  background-color: #ccc;      /* the line’s color, matching your style */
+  transform: translateX(-50%);
+}
+
+/* Each project box (white card) */
+.project-card {
+  width: 48%;                  /* ~ half of the container, minus some margin */
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 6rem;         /* space under each card */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-align: center;          /* center the image + text */
+}
+
+/* The project image at the top of the box */
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;          /* small rounding on corners */
+  object-fit: cover;           /* ensure it covers the card width nicely */
+}
+
+/* The descriptive text under the image */
+.project-card p {
+  margin-top: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+  /* On smaller screens, we can remove the vertical line or handle it differently */
+  .projects-container::after {
+    display: none;             /* hides the dividing line on narrow displays */
+  }
+
+  .project-card {
+    width: 100%;               /* each card takes full width on mobile */
+    margin-bottom: 1.5rem;
+  }
+}

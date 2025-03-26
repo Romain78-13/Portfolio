@@ -10,4 +10,39 @@ body {
   font-family: 'Arial', sans-serif;
   color: #333;
   background-color: #fff;
+  cursor: none;
+}
+
+a, button, input, select, textarea {
+  cursor: none !important;
+}
+
+*:hover,
+*:focus,
+*:active {
+  cursor: none !important;
+}
+
+
+/* Style du curseur personnalisé pour une image 24x24 */
+.custom-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  background: url("../icons/cursor-icon.png") no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+  transform: translate(-6px, -6px); /* Centrage : -half de la taille */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  z-index: 9999;
+}
+
+/* Ombre sur hover */
+.custom-cursor.hover {
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Effet au clic (réduction) */
+.custom-cursor.active {
+  transform: translate(-12px, -12px) scale(0.9);
 }
