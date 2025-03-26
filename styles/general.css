@@ -38,7 +38,7 @@ a, button, input, select, textarea {
   background-size: contain;
   pointer-events: none;
   transform: translate(-6px, -6px); /* Centrage : -half de la taille */
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, opacity 0.15s ease;
   z-index: 9999;
 }
 

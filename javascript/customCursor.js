@@ -25,4 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("mouseup", () => {
     customCursor.classList.remove("active");
   });
+
+  // Quand la souris quitte la fenêtre du document, on masque le curseur
+  document.addEventListener("mouseleave", () => {
+    customCursor.style.opacity = "0";
+  });
+
+// Quand la souris revient dans la fenêtre, on le réaffiche
+  document.addEventListener("mouseenter", () => {
+    customCursor.style.opacity = "1";
+  });
 });
