@@ -28,7 +28,7 @@ a, button, input, select, textarea {
     cursor: auto !important;
   }
   .custom-cursor {
-    display: none;
+    opacity: 0 !important;
   }
 }
 
