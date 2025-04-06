@@ -45,9 +45,10 @@
   position: relative;
 }
 
-/* Flip on hover (desktop) */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+@media screen and (min-width: 769px) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
 }
 
 /* For mobile, you could also make it flip on click using JS, if desired */
