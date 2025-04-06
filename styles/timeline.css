@@ -163,10 +163,11 @@
   transform: translateY(50px);
 }
 
-/***********************************************
-  Responsive (optional)
-***********************************************/
-@media screen and (max-width: 768px) {
+/**
+  Responsive
+**/
+
+/**@media screen and (max-width: 768px) {
   .event {
     width: 80%;
     left: 10% !important;
@@ -177,6 +178,8 @@
     margin-right: auto;
   }
 }
+
+ */
 
 .contact-links {
   margin-top: 10px;

@@ -1,6 +1,6 @@
 // timeline.js
 
-// 1) Reveal AND hide events on scroll with IntersectionObserver
+// 1) afficher et cacher les événements avec le scroll en utilisant IntersectionObserver
 const events = document.querySelectorAll('.event');
 
 const observerOptions = {
@@ -23,37 +23,35 @@ events.forEach(event => {
   revealOnScroll.observe(event);
 });
 
-// 2) Fill the line progressively and move the leaf indicator as we scroll
+// 2) Mettre à jour la barre de timeline en fonction du scroll
 const timeline = document.querySelector('.timeline');
 const lineFill = document.querySelector('.line-fill');
 const leafIndicator = document.querySelector('.leaf-indicator');
 
-// The total pixel height of the timeline container
 const totalHeight = timeline.offsetHeight;
 
 // Revised updateLineFill with an offset
 function updateLineFill() {
   const rect = timeline.getBoundingClientRect();
 
-  // Start the fill when the timeline's top is at 50% of the viewport
+  // Commence quand la barre est à 35% de la vue utilisateur
   const offset = window.innerHeight * 0.35;
 
   let scrolled = offset - rect.top;
 
-  // Clamp the value
   if (scrolled < 0) scrolled = 0;
   if (scrolled > totalHeight) scrolled = totalHeight;
 
-  // Apply to line fill
+  // Appliquer sur la ligne
   lineFill.style.height = scrolled + 'px';
 
-  // Position the leaf
+  // Positionner la feuille
   if (leafIndicator) {
     leafIndicator.style.top = scrolled + 'px';
   }
 }
 
-// Listen to scroll and resize
+// Réponds au scroll et au resize
 window.addEventListener('scroll', updateLineFill);
 window.addEventListener('resize', updateLineFill);
 
