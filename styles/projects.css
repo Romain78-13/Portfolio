@@ -1,63 +1,140 @@
-.projects-section h2 {
+/************************************
+    Flip Projects Section Layout
+*************************************/
+.flip-projects-section h2 {
   text-align: center;
-  margin-bottom: 2rem; /* extra space under the heading */
+  margin-bottom: 2rem;
 }
 
-/* The main container that wraps all project cards */
-.projects-container {
-  position: relative;           /* so we can place the vertical line */
+/* Container holding all flip-cards */
+.flip-cards-container {
   display: flex;
-  flex-wrap: wrap;             /* wraps to next row if screen is smaller */
-  justify-content: space-between;
-  /* You can also add gap: 2rem; if you prefer a newer approach */
+  justify-content: center; /* center them horizontally */
+  flex-wrap: wrap;        /* wrap onto multiple lines on narrower screens */
+  gap: 2rem;             /* space between cards */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* The vertical dividing line in the middle */
-.projects-container::after {
-  content: "";
+/************************************
+    Flip Card Styles
+*************************************/
+/* The outer container for each card */
+.flip-card {
+  width: 350px; /* Augmentez la largeur */
+  height: 450px; /* Augmentez la hauteur */
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* Pour que l'image prenne plus de place verticalement,
+   vous pouvez aussi forcer la hauteur à 100% (optionnel) */
+.flip-card-front img {
+  width: 100%;
+  height: 100%;     /* Pour remplir la hauteur de la face avant */
+  object-fit: cover;
+  display: block;
+}
+
+/* The inner wrapper that flips front/back */
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transform-style: preserve-3d; /* preserve 3D for both faces */
+  position: relative;
+}
+
+/* Flip on hover (desktop) */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* For mobile, you could also make it flip on click using JS, if desired */
+
+/* The card faces (front/back) share common styling: same size, absolute */
+.flip-card-front,
+.flip-card-back {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;                   /* halfway across the container */
-  width: 2px;
-  background-color: #ccc;      /* the line’s color, matching your style */
-  transform: translateX(-50%);
-}
-
-/* Each project box (white card) */
-.project-card {
-  width: 48%;                  /* ~ half of the container, minus some margin */
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 6rem;         /* space under each card */
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* hide the mirrored text */
+  border-radius: 10px;         /* same rounding on both faces */
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  text-align: center;          /* center the image + text */
+  overflow: hidden;            /* clip any overflow (corners) */
 }
 
-/* The project image at the top of the box */
-.project-card img {
+/************************************
+    Front Face
+*************************************/
+.flip-card-front {
+  background-color: #fff; /* white background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-front img {
   width: 100%;
   height: auto;
-  border-radius: 6px;          /* small rounding on corners */
-  object-fit: cover;           /* ensure it covers the card width nicely */
+  object-fit: cover;
+  display: block;
 }
 
-/* The descriptive text under the image */
-.project-card p {
-  margin-top: 1rem;
+/* Subtle title overlay on the front */
+.project-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+/************************************
+    Back Face
+*************************************/
+.flip-card-back {
+  background-color: #fff; /* main background */
+  color: #333;            /* dark text for contrast */
+  transform: rotateY(180deg);
+  padding: 1rem;
+
+  /* You can accent with a top band or border in #b8f2c5 */
+  border-top: 8px solid #b8f2c5;
+  /* or border: 2px solid #b8f2c5; or a top bar, your choice */
+}
+
+.flip-card-back h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   color: #333;
-  line-height: 1.4;
 }
 
-@media screen and (max-width: 768px) {
-  /* On smaller screens, we can remove the vertical line or handle it differently */
-  .projects-container::after {
-    display: none;             /* hides the dividing line on narrow displays */
-  }
+.flip-card-back p {
+  line-height: 1.5;
+}
 
-  .project-card {
-    width: 100%;               /* each card takes full width on mobile */
-    margin-bottom: 1.5rem;
+/* Pour activer le flip quand on ajoute une classe "flipped" en JS */
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/************************************
+    Responsive if needed
+*************************************/
+@media screen and (max-width: 768px) {
+  .flip-cards-container {
+    gap: 1rem;
+  }
+  .flip-card {
+    width: 90%;
+    max-width: 300px; /* still keeps a max if phone is large */
+    margin: 0 auto;
   }
 }

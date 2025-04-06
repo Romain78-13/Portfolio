@@ -157,44 +157,69 @@
   </div>
 </section>
 
-<section id="projects" class="projects-section content-section">
+<!-- ==== Projects Section with Flip Cards ==== -->
+<section id="projects" class="flip-projects-section content-section">
   <h2>Projects</h2>
 
-  <div class="projects-container">
-    <!-- Project 1 -->
-    <div class="project-card">
-      <img src="icons-projects/game-icon.png" alt="Project 1" />
-      <p>
-        My first project
-      </p>
+  <div class="flip-cards-container">
+    <!-- === Project Card #1: Video Game === -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <!-- Front Face -->
+        <div class="flip-card-front">
+          <img src="icons-projects/game-icon.png" alt="Video Game Project" />
+          <div class="project-title">Video Game Project</div>
+        </div>
+        <!-- Back Face -->
+        <div class="flip-card-back">
+          <h3>Video Game Project</h3>
+          <p>
+            A small paragraph describing your video game project.
+            You can highlight technologies, gameplay, or the story behind it.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <img src="icons-projects/shop-icon.png" alt="Project 2" />
-      <p>
-        My second project
-      </p>
+    <!-- === Project Card #2: Clothing Site === -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <!-- Front Face -->
+        <div class="flip-card-front">
+          <img src="icons-projects/shop-icon.png" alt="Clothing Website" />
+          <div class="project-title">Clothing Website</div>
+        </div>
+        <!-- Back Face -->
+        <div class="flip-card-back">
+          <h3>Clothing E-Commerce</h3>
+          <p>
+            Describe your e-commerce project: what technologies you used,
+            your design approach, challenges, etc.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <!-- Project 3 -->
-    <div class="project-card">
-      <img src="icons-projects/shop-icon.png" alt="Project 3" />
-      <p>
-        my third project
-      </p>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-card">
-      <img src="icons-projects/game-icon.png" alt="Project 4" />
-      <p>
-        My fourth project
-      </p>
+    <!-- === Project Card #3: Portfolio === -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <!-- Front Face -->
+        <div class="flip-card-front">
+          <img src="icons-projects/portfolio-icon.png" alt="Portfolio" />
+          <div class="project-title">My Portfolio</div>
+        </div>
+        <!-- Back Face -->
+        <div class="flip-card-back">
+          <h3>Personal Portfolio</h3>
+          <p>
+            A brief description of this very portfolio,
+            the features you implemented, and design inspirations.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
 
 
 <!-- Section experience -->
@@ -206,6 +231,7 @@
 <script src="javascript/timeline.js"></script>
 <script src="javascript/dots-circle-toggle.js"></script>
 <script src="javascript/customCursor.js"></script>
+<script src="javascript/flip-cards.js"></script>
 
 </body>
 </html>
