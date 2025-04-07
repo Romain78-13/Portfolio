@@ -167,19 +167,26 @@
   Responsive
 **/
 
-/**@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  /* On agrandit la zone des events à 80%
+     (au lieu de 50%), et on les décale selon gauche/droite */
   .event {
-    width: 80%;
-    left: 10% !important;
-    text-align: left;
+    width: 80%;           /* plus large */
+    margin-bottom: 1.5rem; /* un peu plus d'espace entre bulles */
   }
-  .event.left .icon {
-    margin-left: 0;
-    margin-right: auto;
+
+  /* La bulle de gauche part de 0% */
+  .event.left {
+    left: 0;
+    text-align: right; /* texte aligné à droite si on veut l'effet "inversé" */
+  }
+
+  /* La bulle de droite part de 20% */
+  .event.right {
+    left: 20%;
+    text-align: left; /* texte normal à gauche */
   }
 }
-
- */
 
 .contact-links {
   margin-top: 10px;
