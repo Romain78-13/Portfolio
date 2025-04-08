@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Crée un IntersectionObserver avec un seuil (threshold)
   // ex. 0.3 => l’animation se déclenche quand 30% de la section est visible
   const observerOptions = {
-    threshold: 0.25
+    threshold: 0.2
   };
 
   const observer = new IntersectionObserver((entries) => {
