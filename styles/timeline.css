@@ -177,7 +177,7 @@
 
   /* La bulle de gauche part de 0% */
   .event.left {
-    left: 0;
+    left: -15%;
     text-align: right; /* texte aligné à droite si on veut l'effet "inversé" */
   }
 
