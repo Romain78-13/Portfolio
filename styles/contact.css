@@ -30,8 +30,8 @@
 
 /* Icône du titre “Contact” */
 .contact-title-icon {
-  width: 24px; /* ajustez selon vos besoins */
-  height: 24px;
+  width: 60px; /* ajustez selon vos besoins */
+  height: 60px;
   object-fit: contain;
 }
 
