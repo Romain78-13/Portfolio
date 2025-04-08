@@ -183,7 +183,7 @@
 
   /* La bulle de droite part de 20% */
   .event.right {
-    left: 25%;
+    left: 40%;
     text-align: left; /* texte normal à gauche */
   }
 }
