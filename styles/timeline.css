@@ -177,13 +177,13 @@
 
   /* La bulle de gauche part de 0% */
   .event.left {
-    left: -20%;
+    left: -15%;
     text-align: right; /* texte aligné à droite si on veut l'effet "inversé" */
   }
 
   /* La bulle de droite part de 20% */
   .event.right {
-    left: 20%;
+    left: 25%;
     text-align: left; /* texte normal à gauche */
   }
 }
