@@ -1,0 +1,101 @@
+/***********************************
+  Section Contact : Layout de base
+************************************/
+.contact-section {
+  /* Hauteur min, padding… ajustez à votre goût */
+  min-height: 40vh;
+  padding: 3rem 2rem;
+
+  /* Fond gris ou dégradé */
+  background: linear-gradient(to bottom, #f3f3f3 0%, #e4e4e4 100%);
+  /* Ou simplement background-color: #eee; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Titre + icône */
+.contact-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.contact-heading h2 {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  color: #333;
+}
+
+/* Icône du titre “Contact” */
+.contact-title-icon {
+  width: 60px; /* ajustez selon vos besoins */
+  height: 60px;
+  object-fit: contain;
+}
+
+/***********************************
+  La “boîte” qui contient les liens
+************************************/
+.contact-box {
+  background-color: rgba(255, 255, 255, 0.3); /* un bloc partiellement transparent */
+  border-radius: 12px;
+  padding: 1rem 2rem;
+
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Chaque lien (LinkedIn, email…) */
+.contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #666; /* gris par défaut */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Icône devant le texte du lien */
+.contact-link-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  object-fit: contain;
+}
+
+/* Label du lien (LinkedIn, e-mail) */
+.contact-label {
+  white-space: nowrap;
+}
+
+/* Au survol : couleur plus sombre ou accentuée pour signaler l’interactivité */
+.contact-link:hover {
+  color: #333; /* passe en gris plus foncé, par ex. */
+}
+
+/* OPTIONNEL : si vous voulez un hover plus spécifique sur LinkedIn,
+   cibler le .contact-link si c’est le premier (ou ajouter une classe custom).
+   ex. .contact-link.linkedin:hover { color: #0077B5; } */
+
+/***********************************
+  Responsive
+************************************/
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+
+  .contact-box {
+    flex-direction: column; /* on empile les liens */
+    gap: 1rem;
+  }
+
+  .contact-link {
+    font-size: 0.95rem;
+  }
+}
+
+

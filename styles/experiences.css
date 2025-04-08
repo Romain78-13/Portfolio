@@ -35,7 +35,7 @@
 
 /* Hover sur l’en-tête => légère surbrillance */
 .accordion-header:hover {
-  background-color: #b8f2c525;
+  background-color: rgba(33, 218, 75, 0.15);
 }
 
 /* Icône d’expérience (ex : logo, etc.) */

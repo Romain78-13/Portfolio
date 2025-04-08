@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/timeline.css" />
   <link rel="stylesheet" href="styles/projects.css" />
   <link rel="stylesheet" href="styles/experiences.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
 </head>
 <body>
 
@@ -58,7 +59,8 @@
 </section>
 
 <!-- Section about me en dessous (avec la timeline) -->
-<section id="About me" class="timeline-section content-section">
+<section id="About me" class="timeline-section content-section fade-section">
+  <img src="icons/about-me-icon.png" alt="Project icon" class="title-icon" />
   <h2>About Me</h2>
   <p class="intro">
     Welcome to my story! Scroll down to discover my background, studies, skills,
@@ -158,8 +160,11 @@
   </div>
 </section>
 
+<div class="spacer-75"></div>
+
 <!-- ==== Projects Section with Flip Cards ==== -->
-<section id="projects" class="flip-projects-section content-section">
+<section id="projects" class="flip-projects-section content-section fade-section">
+  <img src="icons/projets-icon.png" alt="Project icon" class="title-icon" />
   <h2>Projects</h2>
 
   <div class="flip-cards-container">
@@ -222,9 +227,11 @@
   </div>
 </section>
 
+<div class="spacer-75"></div>
 
 <!-- Section experience -->
-<section id="experience" class="content-section">
+<section id="experience" class="content-section fade-section">
+  <img src="icons/experiences-icon.png" alt="Project icon" class="title-icon" />
   <h2>Expérience</h2>
 
   <!-- Item 1 -->
@@ -235,11 +242,14 @@
         <h3>Auxiliaire d'été à la société générale</h3>
         <p>Été 2024</p>
       </div>
-      <img src="icons-experiences/chevron-down.png" alt="Chevron" class="arrow-icon" />
+      <img src="icons-experiences/chevron-down-icon.png" alt="Chevron" class="arrow-icon" />
     </div>
     <div class="accordion-content">
       <p>
-        Travail saisonnier dans le secteur X, où j’ai appris...
+        One-month summer position at Société Générale (July–August 2024), assisting
+        with daily operations in the Import/Export department. Verified compliance of
+        international trade documents, ensured accurate data entry, and contributed to
+        the efficiency of internal processes in a major French bank.
       </p>
     </div>
   </div>
@@ -252,11 +262,15 @@
         <h3>Intérim</h3>
         <p>Avril 2024</p>
       </div>
-      <img src="icons-experiences/chevron-down.png" alt="Chevron" class="arrow-icon" />
+      <img src="icons-experiences/chevron-down-icon.png" alt="Chevron" class="arrow-icon" />
     </div>
     <div class="accordion-content">
       <p>
-        Expérience ponctuelle en intérim, missions...
+        Short-term assignment in April 2024 involving warehouse and inventory tasks.
+        Handled manual operations such as transporting boxes, placing items on pallets,
+        and organizing stock. Additionally, validated incoming stock records and removed
+        obsolete listings. This experience strengthened my understanding of logistics
+        processes and the importance of accurate inventory management.
       </p>
     </div>
   </div>
@@ -270,10 +284,14 @@
         <p>Juin 2023 - Août 2023</p>
       </div>
       <!-- La flèche / chevron -->
-      <img src="icons-experiences/chevron-down.png" alt="Chevron" class="arrow-icon" />
+      <img src="icons-experiences/chevron-down-icon.png" alt="Chevron" class="arrow-icon" />
     </div>
     <div class="accordion-content">
-      <p>Texte détaillé de cette expérience…</p>
+      <p>Financial BI Consultant intern at Cité Internationale Universitaire de Paris.
+        Implemented Excel VBA automations to streamline data processes, and created
+        dashboards using SAGE BI Reporting. Conducted data cleaning and analysis to
+        support strategic decision-making and contributed to operational risk
+        assessments in a student housing environment.</p>
     </div>
   </div>
 
@@ -286,21 +304,66 @@
         <p>Juin 2022 - Août 2022</p>
       </div>
       <!-- La flèche / chevron -->
-      <img src="icons-experiences/chevron-down.png" alt="Chevron" class="arrow-icon" />
+      <img src="icons-experiences/chevron-down-icon.png" alt="Chevron" class="arrow-icon" />
     </div>
     <div class="accordion-content">
-      <p>Texte détaillé de cette expérience…</p>
+      <p>Data Scientist intern at Autobiz, specializing in vehicle pricing. Extracted
+        and cleaned datasets using Python to enhance data quality, performed advanced
+        analysis to identify optimization opportunities, and provided strategic
+        recommendations. Took part in critical reviews of data reliability for
+        decision-making processes.</p>
     </div>
   </div>
+</section>
 
+<div class="spacer-200"></div>
 
+<!-- BOX VERTE -->
+<div class="contact-box-green fade-up">
+  <h3>
+    Let's stay in touch!
+    <img src="icons/ampoule-icon.png" alt="Icon" class="title-icon" />
+  </h3>
+
+  <form class="contact-form" onsubmit="return false;">
+    <input type="email" placeholder="Email" class="contact-input" />
+    <textarea placeholder="Message" class="contact-textarea"></textarea>
+    <button type="submit" class="contact-button">Message me! 🛎</button>
+  </form>
+</div>
+
+<div class="spacer-200"></div>
+
+<section id="contact" class="contact-section">
+  <div class="contact-heading">
+    <!-- Icône avant “Contact” -->
+    <img src="icons-contact/contact-icon2.png" alt="Contact icon" class="contact-title-icon" />
+    <h2>Contact</h2>
+  </div>
+
+  <!-- Conteneur global pour les infos de contact -->
+  <div class="contact-box">
+    <!-- Lien vers LinkedIn -->
+    <a href="https://www.linkedin.com/in/votrenom/" target="_blank" class="contact-link">
+      <img src="icons-contact/linkedin-icon.png" alt="LinkedIn icon" class="contact-link-icon" />
+      <span class="contact-label">LinkedIn</span>
+    </a>
+
+    <!-- E-mail -->
+    <a href="mailto:romain.simeon@dauphine.eu" class="contact-link">
+      <img src="icons-contact/mail-icon.png" alt="Email icon" class="contact-link-icon" />
+      <span class="contact-label">romain.simeon@dauphine.eu</span>
+    </a>
+  </div>
 </section>
 
 <script src="javascript/timeline.js"></script>
-<script src="javascript/dots-circle-toggle.js"></script>
+<script src="javascript/dot-circle-toggle.js"></script>
 <script src="javascript/customCursor.js"></script>
 <script src="javascript/flip-cards.js"></script>
 <script src="javascript/accordeon.js"></script>
+<script src="javascript/scroll-animation.js"></script>
+<script src="javascript/fade-up.js"></script>
 
 </body>
 </html>
